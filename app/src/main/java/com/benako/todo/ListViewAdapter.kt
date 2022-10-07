@@ -16,15 +16,16 @@ class ListViewAdapter(val list : List<Todos> ) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder { //what item layout to use
-        TODO("Not yet implemented")
         val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        return ItemViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) { // what order to put items in
-        TODO("Not yet implemented")
+        val todo = list[position]
+        holder.title.text = todo.title
     }
 
     override fun getItemCount(): Int { // how many items are there in your lists
-        TODO("Not yet implemented")
+        return list.size
     }
 }
