@@ -7,7 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.benako.todo.data.Todos
 
-class ListViewAdapter(val list : List<Todos> ) : RecyclerView.Adapter<ListViewAdapter.ItemViewHolder>{
+class ListViewAdapter(val list : List<Todos> ) :
+    RecyclerView.Adapter<ListViewAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
         //what is going in
         var title : TextView = view.findViewById(R.id.todoItem)
