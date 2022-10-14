@@ -1,4 +1,4 @@
-package com.benako.todo
+package com.benako.todo.ui
 
 import android.graphics.Paint
 import android.os.Bundle

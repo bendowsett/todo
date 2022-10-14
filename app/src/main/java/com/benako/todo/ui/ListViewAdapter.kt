@@ -1,4 +1,4 @@
-package com.benako.todo
+package com.benako.todo.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.benako.todo.R
 import com.benako.todo.data.Todos
 import kotlin.reflect.KFunction1
 
