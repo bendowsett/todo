@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757571740146",
+    "project_id": "todo-87f3e",
+    "storage_bucket": "todo-87f3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757571740146:android:5e1f5f41dea4aefe738b6b",
+        "android_client_info": {
+          "package_name": "com.benako.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757571740146-sda6o8mieqk6far4bdc4hgn7ronspier.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMp9PPYZ2dkHYrhBDhT-nlhX5RQ9R-oao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757571740146-sda6o8mieqk6far4bdc4hgn7ronspier.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
