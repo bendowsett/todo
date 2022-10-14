@@ -11,7 +11,7 @@ import com.benako.todo.data.Todos
 import kotlin.reflect.KFunction1
 
 class ListViewAdapter(
-    val list: List<Todos>,
+    val list: MutableList<Todos>,
     val removeItem: KFunction1<TextView, Unit>,
     val uncheckItem: KFunction1<TextView, Unit>
 ) :

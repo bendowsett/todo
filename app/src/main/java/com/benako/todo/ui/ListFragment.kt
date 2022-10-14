@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.benako.todo.data.Todos
 import com.benako.todo.databinding.FragmentListBinding
@@ -15,10 +16,11 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ListFragment : Fragment() {
 
+    private val viewModel: ListViewModel by viewModels()
+
     private lateinit var binding: FragmentListBinding
 
-    var exampleTodos = mutableListOf<Todos>()
-    var adapter = ListViewAdapter(exampleTodos, ::deleteNote, ::uncheck)
+    var adapter = ListViewAdapter(viewModel.exampleTodos.value!!, ::deleteNote, ::uncheck)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +28,7 @@ class ListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentListBinding.inflate(inflater, container, false)
-        var adapter = ListViewAdapter(exampleTodos, ::deleteNote, ::uncheck)
+        var adapter = ListViewAdapter(viewModel.exampleTodos.value!!, ::deleteNote, ::uncheck)
         binding.recyclerView.layoutManager = LinearLayoutManager(this.requireContext())
         binding.recyclerView.adapter = adapter
 
@@ -40,7 +42,7 @@ class ListFragment : Fragment() {
 
     fun addNote() {
         var input = binding.noteInput.text.toString()
-        exampleTodos.add(Todos(input))
+        viewModel.addToDo(input)
         binding.noteInput.text.clear()
 
     }
